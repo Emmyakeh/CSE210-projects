@@ -15,7 +15,7 @@ class Program
        Job job2 = new Job();
        job2._jobTitle = "Software Engineer";
        job2._companyName = "Oracle";
-       job2._salary = 1500000;
+       job2._salary = 150000;
        job2._startYear = 2023;
       
 
