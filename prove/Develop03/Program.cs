@@ -1,25 +1,37 @@
-using System;
 
 class Program
 {
     static void Main(string[] args)
     {
+        var scriptureLibrary = new ScriptureLibrary();
+
+        Console.WriteLine("Welcome to the Scripture Hiding Program!");
+
+        var sampleScripture = scriptureLibrary.GetRandomScripture();
+
+        while (!sampleScripture.AllWordsHidden())
         {
-        Fraction f1 = new Fraction();
-        Console.WriteLine(f1.GetFractionString());
-        Console.WriteLine(f1.GetDecimalValue());
+            Console.Clear(); // Clear the console
 
-        Fraction f2 = new Fraction(5);
-        Console.WriteLine(f2.GetFractionString());
-        Console.WriteLine(f2.GetDecimalValue());
+            // Display the scripture with hidden words
+            Console.WriteLine(sampleScripture.GetCurrentOutput());
 
-        Fraction f3 = new Fraction(3, 4);
-        Console.WriteLine(f3.GetFractionString());
-        Console.WriteLine(f3.GetDecimalValue());
+            if (!sampleScripture.AllWordsHidden())
+            {
+                Console.WriteLine("\nPress Enter to hide words or type 'quit' to exit.");
 
-        Fraction f4 = new Fraction(1, 3);
-        Console.WriteLine(f4.GetFractionString());
-        Console.WriteLine(f4.GetDecimalValue());
-    }
+                // Read user input
+                string userInput = Console.ReadLine();
+
+                // Check if the user wants to quit
+                if (userInput.ToLower() == "quit")
+                    break;
+
+                // Hide a random word
+                sampleScripture.HideRandomWord();
+            }
+        }
+
+        Console.WriteLine("Program ended");
     }
 }
