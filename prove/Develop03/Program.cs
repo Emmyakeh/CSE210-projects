@@ -1,4 +1,3 @@
-
 class Program
 {
     static void Main(string[] args)
@@ -11,23 +10,19 @@ class Program
 
         while (!sampleScripture.AllWordsHidden())
         {
-            Console.Clear(); 
+            Console.Clear();
 
-            
             Console.WriteLine(sampleScripture.GetCurrentOutput());
 
             if (!sampleScripture.AllWordsHidden())
             {
                 Console.WriteLine("\nPress Enter to hide words or type 'quit' to exit.");
 
-                
                 string userInput = Console.ReadLine();
 
-                
                 if (userInput.ToLower() == "quit")
                     break;
 
-                
                 sampleScripture.HideRandomWord();
             }
         }

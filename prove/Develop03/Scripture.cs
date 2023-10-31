@@ -1,11 +1,11 @@
 class Scripture
 {
-    public string Reference { get; }
+    public Reference Reference { get; }
     public string Text { get; }
 
     private List<Word> words;
 
-    public Scripture(string reference, string text)
+    public Scripture(Reference reference, string text)
     {
         Reference = reference;
         Text = text;
