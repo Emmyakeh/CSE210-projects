@@ -1,0 +1,3 @@
+SimpleGoal,race,run,1000,0,0,1
+EternalGoal,screitures,reas=d,50,0,0,2
+ChecklistGoal,exercise,gym,100,500,1000,1

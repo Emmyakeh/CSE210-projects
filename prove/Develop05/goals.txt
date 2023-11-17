@@ -1,0 +1,1 @@
+SimpleGoal,run race,go to the stadium,100,0,0,0
